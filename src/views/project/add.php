@@ -12,43 +12,31 @@
 <body>
 
 <div class="container">
-<h1>Danh sách dự án khí tượng</h1>
-
-    <table class="table table-hover rounded">
-        <thead>
-            <tr>
-                <th scope="col">Mã dự án</th>
-                <th scope="col">Tên dự án</th>
-                <th scope="col">Thời gian</th>
-                <th scope="col">Lĩnh vực</th>
-                <th scope="col">Nhiệm vụ</th>
-                <th scope="col">Cơ quan thực hiện</th>
-                <th scope="col">Thao tác</th>
-                <th scope="col">Thao tác</th>
-
-            </tr>
-        </thead>
-        <tbody>
-        <?php
-        foreach($projects as $project){
-            echo '
-            <tr>
-                <th scope="row">' . $project['maduan'] . '</th>
-                <td>' . $project['tenduan'] . '</td>
-                <td>' . $project['namthuchien'] . '</td>
-                <td>' . $project['linhvuc'] . '</td>
-                <td>' . $project['nhiemvu'] . '</td>
-                <td>' . $project['coquanthuchien'] . '</td>
-                <td>' . $project['coquanthuchien'] . '</td>
-                <td><a href="index.php?controller=project&action=edit&id=' . $project['maduan'] . '" class="btn btn-warning" '. $project['maduan'] .'>Sửa</a></td>
-                <td><a class="btn btn-danger" '. $project['maduan'] .'>Xóa</a></td>
-
-            </tr>';
-        }
-        ?>
-            </tbody>
-    </table>
-    <a class="btn btn-success" href="index.php?controller=project&action=add">Thêm dự án</a>
+<h1>Thông tin dự án</h1>
+<form action="" method="post">
+    <div class="form-group">
+        <label for="">Tên dự án</label>
+        <input type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="">Thời gian</label>
+        <input type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="">Lĩnh vực</label>
+        <input type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="">Nhiệm vụ</label>
+        <input type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="">Cơ quan thực hiện</label>
+        <input type="text" class="form-control"/>
+    </div>
+  
+    <input type="submit" name="submit" class="btn btn-primary" value="Thêm">
+</form>
 
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

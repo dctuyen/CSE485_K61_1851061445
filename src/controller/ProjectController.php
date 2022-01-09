@@ -11,6 +11,8 @@ class ProjectController
 
     function add()
     {
+        require_once 'views/project/add.php';
+
         // Tôi sẽ cần gọi ProjectModel để truy vấn dữ liệu
 
         // Sau khi truy vấn được dữ liệu, tôi sẽ đổ ra ProjectView/add.php tương ứng
