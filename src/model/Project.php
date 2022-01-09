@@ -37,4 +37,14 @@ class ProjectModel
     {
         mysqli_close($connection);
     }
+    public function deleteProject($id) {
+        $conn = $this->connectDb();
+        $sql = "DELETE FROM duan WHERE maduan = ". $id . "";
+        if (mysqli_query($conn, $sql)) {
+            $this->closeDb($conn);
+            return true;
+        }
+        $this->closeDb($conn);
+        return false;
+    }
 }

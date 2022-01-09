@@ -25,5 +25,17 @@ class ProjectController
 
     function delete()
     {
+        $id = $_GET['id'];
+        if (!is_numeric($id)) {
+            header("Location: ?controller=project&action=index");
+        }
+
+        $projectModel = new ProjectModel();
+        $doneDelete = $projectModel->deleteProject($id);
+        if ($doneDelete) {
+            die("xóa thành công");
+        } else {
+            die("xóa không thành công");
+        }
     }
 }

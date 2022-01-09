@@ -41,7 +41,7 @@
                 <td>' . $project['coquanthuchien'] . '</td>
                 <td>' . $project['coquanthuchien'] . '</td>
                 <td><a href="index.php?controller=project&action=edit&id=' . $project['maduan'] . '" class="btn btn-warning" '. $project['maduan'] .'>Sửa</a></td>
-                <td><a class="btn btn-danger" '. $project['maduan'] .'>Xóa</a></td>
+                <td><a class="btn btn-danger" href="index.php?controller=project&action=delete&id=' . $project['maduan'] . '">Xóa</a></td>
 
             </tr>';
         }
